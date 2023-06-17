@@ -1,0 +1,22 @@
+<launch>
+	
+	<node pkg="turtlesim" type="turtlesim_node" name="el_turlesim" />
+
+	<node pkg="rosservice" type="rosservice" name="kill_turtle_1" 
+		  args="call /kill 'turtle1'"/>
+
+	<node pkg="rosservice" type="rosservice" name="load_turtle3" 
+		  args="call /spawn 5 1 0 'turtle3'"/>
+
+	<node pkg="rosservice" type="rosservice" name="load_turtle2" 
+		  args="call /spawn 5 5 45 'turtle2'"/>
+	
+	<node pkg="tmara_move" type="dm_target.py" name="bait" />
+
+    <node pkg="tmara_move" type="turturner.py" name="it"  />
+
+
+
+    
+
+</launch>
